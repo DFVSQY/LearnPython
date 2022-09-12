@@ -48,3 +48,63 @@ print(universe_age)
 # 通常用全大写表示该变量为常量
 MATH_PI = 3.14
 print(MATH_PI)
+
+# 打印数组会将方括号一起打印出来
+titles = ["file", "edit", "selection", "view", "go", "run", "terminal", "help"]
+print(titles)
+
+# 打印列表元素
+print(titles[0])  # 首个元素
+print(titles[-1])  # 最后一个元素
+print(f"the first title is:{titles[0]}")
+
+# 修改列表元素值
+titles[0] = "File"
+print(titles)
+
+# 列表末尾添加元素
+titles.append("Debug")
+print(titles)
+
+# 在指定位置插入元素
+titles.insert(2, "Edit")
+print(titles)
+
+# python并未限制元素列表为同一类型
+titles.insert(0, 0)
+titles.append(-1)
+print(titles)
+
+# 使用del方法删除列表元素
+del titles[3]
+del titles[-2]
+print(titles)
+
+# 使用pop方式删除列表指定位置的值
+d1 = titles.pop()  # 删除列表末尾元素的值，并返回删除的值
+d2 = titles.pop(0)  # 删除列表指定位置的值并返回删除的值，此处为第一个元素
+print(d1, d2)
+print(titles)
+
+# 删除列表中指定的值
+titles.remove("File")
+print(titles)
+
+# 对列表进行排序
+titles.sort()
+print(titles)
+titles.sort(reverse=True)
+print(titles)
+
+# 对列表进行排序，但不改变原来列表的内容
+print(sorted(titles))
+print(titles)
+print(sorted(titles, reverse=True))
+print(titles)
+
+# 将列表倒转
+titles.reverse()
+print(titles)
+
+# 输出列表长度
+print(len(titles))
