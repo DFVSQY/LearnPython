@@ -70,10 +70,10 @@ print(titles)
 titles.insert(2, "Edit")
 print(titles)
 
-# python并未限制元素列表为同一类型
-titles.insert(0, 0)
-titles.append(-1)
-print(titles)
+# # python并未限制列表元素为同一类型，但最好不要这么干
+# titles.insert(0, 0)
+# titles.append(-1)
+# print(titles)
 
 # 使用del方法删除列表元素
 del titles[3]
