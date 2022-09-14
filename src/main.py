@@ -86,9 +86,9 @@ d2 = titles.pop(0)  # 删除列表指定位置的值并返回删除的值，此�
 print(d1, d2)
 print(titles)
 
-# 删除列表中指定的值
-titles.remove("File")
-print(titles)
+# # 删除列表中指定的值
+# titles.remove("File")
+# print(titles)
 
 # 对列表进行排序
 titles.sort()
@@ -108,3 +108,6 @@ print(titles)
 
 # 输出列表长度
 print(len(titles))
+
+for title in titles:
+	print(title)
