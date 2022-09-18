@@ -109,5 +109,10 @@ print(titles)
 # 输出列表长度
 print(len(titles))
 
-for title in titles:
+# 遍历列表
+for title in titles:			# for语句后每个缩进都是循环的一部分(python通过缩进判断代码行之间的关系)
 	print(title)
+	print(title.title())
+	print(title.upper())
+
+print("traverse list finish!")
