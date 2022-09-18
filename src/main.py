@@ -111,8 +111,39 @@ print(len(titles))
 
 # 遍历列表
 for title in titles:			# for语句后每个缩进都是循环的一部分(python通过缩进判断代码行之间的关系)
-	print(title)
-	print(title.title())
-	print(title.upper())
+    print(title)
+    print(title.title())
+    print(title.upper())
 
 print("traverse list finish!")
+
+# range(1, 5)生成一系列数(此时range的结果不是数字列表)，输出：
+# 1
+# 2
+# 3
+# 4
+for value in range(1, 5):
+    print(value)
+
+# 创建数字列表
+numbers = list(range(1, 5))
+print(numbers)		# [1, 2, 3, 4]
+
+# range可通过第三个参数指定步长
+odd_numbers = list(range(1, 5, 2))
+print(odd_numbers)  # [1, 3]
+
+# range也支持指定负数步长
+odd_numbers = list(range(5, 0, -2))
+print(odd_numbers)  # [5, 3, 1]
+
+# 对数字列表进行简单的统计计算
+squares = []
+for value in range(1, 11):
+    squares.append(value ** 2)
+print(squares)
+print(min(squares), max(squares), sum(squares))  # 对数字列表进行一些简单的统计计算
+
+# 列表解析
+squares = [value ** 2 for value in range(1, 11)] # 列表名 = [元素生成表达式 for循环]
+print(squares)
