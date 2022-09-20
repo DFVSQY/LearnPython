@@ -145,5 +145,27 @@ print(squares)
 print(min(squares), max(squares), sum(squares))  # 对数字列表进行一些简单的统计计算
 
 # 列表解析
-squares = [value ** 2 for value in range(1, 11)] # 列表名 = [元素生成表达式 for循环]
+squares = [value ** 2 for value in range(1, 11)]  # 列表名 = [元素生成表达式 for循环]
 print(squares)
+
+titles = ["file", "edit", "selection", "view", "go", "run", "terminal", "help"]
+
+title1, title2, title3 = titles[0:3]
+print(title1, title2, title3)  # file edit selection
+print(titles[1:3])  # ['edit', 'selection']
+print(titles[:3])  # ['file', 'edit', 'selection']
+print(titles[3:])  # ['view', 'go', 'run', 'terminal', 'help']
+print(titles[-3:])  # ['run', 'terminal', 'help']
+
+# copy list
+# 输出：['file', 'edit', 'selection', 'view', 'go', 'run', 'terminal', 'help']
+print(titles[:])
+
+# 起始值的索引不能比终止值更靠前
+print(titles[3:1])  # []
+t = titles[3:1]
+print(t)  # []
+
+# 遍历列表切片
+for title in titles[1:3]:
+    print(title)
