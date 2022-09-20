@@ -169,3 +169,27 @@ print(t)  # []
 # 遍历列表切片
 for title in titles[1:3]:
     print(title)
+
+# 元组：python中不可修改的列表，使用逗号分割表示，可选用小括号括起来（只是为了方便看起来更整洁）
+fix_titles = "file", "edit", "selection", "view", "go", "run", "terminal", "help"
+
+# 输出：('file', 'edit', 'selection', 'view', 'go', 'run', 'terminal', 'help')
+print(fix_titles)
+
+fix_titles = ("file", "edit", "selection", "view",
+              "go", "run", "terminal", "help")
+
+# 输出：('file', 'edit', 'selection', 'view', 'go', 'run', 'terminal', 'help')
+print(fix_titles)
+
+# 由于元组是由逗号定义的，所以只有一个元素的元组第一个元素后必须加上逗号
+only_one_tuple = ("OnlyOne",)
+print(only_one_tuple)
+
+# 这种形式只是一个字符串
+only_one_str = ("OnlyOne")
+print(only_one_str)  # OnlyOne
+
+# 虽然不可修改元组内容，但可以修改变量的元组引用
+fix_titles = ("File", "Edit", "Selection")
+print(fix_titles)  # ('File', 'Edit', 'Selection')
