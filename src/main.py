@@ -193,3 +193,31 @@ print(only_one_str)  # OnlyOne
 # 虽然不可修改元组内容，但可以修改变量的元组引用
 fix_titles = ("File", "Edit", "Selection")
 print(fix_titles)  # ('File', 'Edit', 'Selection')
+
+cars = ["audi", "bmw", "subaru", "toyota"]
+for car in cars:
+    if car == "bmw":
+        print(car.upper())
+    else:
+        print(car.title())
+
+for car in cars:
+    if car != "bmw":
+        print(car.title())
+    else:
+        print(car.upper())
+
+nums = [10, 30, 20, 5, 1, 3]
+for num in nums:
+    if num >= 20:
+        print(num, ">= 20")
+    elif num > 10:
+        print(num, "> 10")
+    else:
+        print(num, "<= 10")
+
+for num in nums:
+    if num <= 20 and num >= 10:
+        print(num, "<= 20 and >= 10")
+    elif num > 20 or num <= 5:
+        print(num, "> 20 or <= 5")
