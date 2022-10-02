@@ -229,3 +229,10 @@ if num in nums:
 num = 25
 if num not in nums:
     print("num 25 not in nums")
+
+if nums:  # 在if 语句中将列表名用作条件表达式时，Python将在列表至少包含一个元素时返回True ，并在列表为空时返回False
+    print("nums is not empty")
+
+empty_nums = []
+if not empty_nums:
+    print("empty_num is empty")
