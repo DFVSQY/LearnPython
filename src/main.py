@@ -248,7 +248,7 @@ print(titles)
 
 # 为字典添加键值对
 titles["view"] = "View"
-titles["Go"] = "Go"
+titles["go"] = "Go"
 print(titles)
 
 # 修改字典中的值
@@ -262,3 +262,34 @@ print(titles)
 # 如果指定的键有可能不存在，应考虑使用方法get() ，而不要使用方括号表示法
 # 方法get() 的第一个参数用于指定键，是必不可少的；第二个参数为指定的键不存在时要返回的值，是可选的
 print(titles.get("file"))  # output: None
+
+#output: dict_items([('edit', 'Edit'), ('selection', 'Selection'), ('view', 'View'), ('Go', 'Go')])
+print(titles.items())  # items方法返回一个键值对列表
+
+# 遍历字典
+for key, value in titles.items():
+    print(key, value)
+
+# 遍历字典中的所有key
+for key in titles.keys():
+    print(key)
+
+# 遍历字典中的所有value
+for value in titles.values():
+    print(value)
+
+# 从Python 3.7起，遍历字典时将按插入的顺序返回其中的元素。
+# 不过在有些情况下，你可能要按与此不同的顺序遍历字典。
+# 要以特定顺序返回元素，一种办法是在for 循环中对返回的键进行排序。
+# 为此，可使用函数sorted() 来获得按特定顺序排列的键列表的副本
+for key in sorted(titles.keys()):
+    print(key)
+
+titles["File"] = "File"
+titles["Go"] = "Go"
+print(titles)
+
+# 为剔除重复项，可使用集合set
+# 集合中的每个元素都必须是独一无二的
+for value in set(titles.values()):
+    print(value)
