@@ -236,3 +236,29 @@ if nums:  # 在if 语句中将列表名用作条件表达式时，Python将在�
 empty_nums = []
 if not empty_nums:
     print("empty_num is empty")
+
+# 字典用放在花括号{}中的一系列键值对表示
+# 键和值之间用冒号分隔，而键值对之间用逗号分隔
+titles = {"file": "File", "edit": "Edit", "selection": "Selection"}
+
+# 要获取与键相关联的值，可依次指定字典名和放在方括号内的键
+print(titles["file"])  # 使用放在方括号内的键从字典中获取感兴趣的值时，可能会引发问题：如果指定的键不存在就会出错
+print(titles["selection"])
+print(titles)
+
+# 为字典添加键值对
+titles["view"] = "View"
+titles["Go"] = "Go"
+print(titles)
+
+# 修改字典中的值
+titles["file"] = "File Save"
+print(titles)
+
+# 删除字典中的键值对
+del (titles["file"])  # 只能删除存在的key，删除不存在的key会报错
+print(titles)
+
+# 如果指定的键有可能不存在，应考虑使用方法get() ，而不要使用方括号表示法
+# 方法get() 的第一个参数用于指定键，是必不可少的；第二个参数为指定的键不存在时要返回的值，是可选的
+print(titles.get("file"))  # output: None
