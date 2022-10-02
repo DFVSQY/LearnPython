@@ -221,3 +221,11 @@ for num in nums:
         print(num, "<= 20 and >= 10")
     elif num > 20 or num <= 5:
         print(num, "> 20 or <= 5")
+
+num = 20
+if num in nums:
+    print("num 20 in nums")
+
+num = 25
+if num not in nums:
+    print("num 25 not in nums")
