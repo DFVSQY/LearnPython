@@ -319,7 +319,12 @@ users = {
 }
 print(users)
 
-open_test_input = True
+open_test_input = False
 if open_test_input:
+    # 使用函数input()时，Python将用户输入解读为字符串
     message = input("Tell me something, I will repeat it back to you:")
     print(message)
+
+    age = input("how old are you? ")
+    age = int(age)  # 将字符串转换为整数
+    print(age)
