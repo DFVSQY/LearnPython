@@ -318,3 +318,8 @@ users = {
     },
 }
 print(users)
+
+open_test_input = True
+if open_test_input:
+    message = input("Tell me something, I will repeat it back to you:")
+    print(message)
