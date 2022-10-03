@@ -304,3 +304,17 @@ editor = {
     "name": "visual studio code",
 }
 print(editor)
+
+users = {
+    "Bill": {
+        "Name": "Bill Gates",
+        "Sex": "Man",
+        "Age": 50,
+    },
+    "Jobs": {
+        "Name": "Steve Jobs",
+        "Sex": "Man",
+        "Age": 40,
+    },
+}
+print(users)
