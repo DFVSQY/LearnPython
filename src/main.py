@@ -293,3 +293,8 @@ print(titles)
 # 集合中的每个元素都必须是独一无二的
 for value in set(titles.values()):
     print(value)
+
+person_1 = {"name": "Bill", "age": 18, "sex": "man"}
+person_2 = {"name": "Job", "age": 23, "sex": "women"}
+persons = [person_1, person_2]
+print(persons)
