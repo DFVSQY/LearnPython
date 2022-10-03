@@ -328,3 +328,6 @@ if open_test_input:
     age = input("how old are you? ")
     age = int(age)  # 将字符串转换为整数
     print(age)
+
+# 求模运算
+print(22 % 5)  # output: 2
