@@ -354,3 +354,17 @@ while cur_num <= 10:
     if old_num % 2 != 0:
         continue
     print(old_num)
+
+# while结合列表：列表间移动元素
+unconfirm_users = ["alice", "bill", "jobs"]
+confirm_users = []
+while unconfirm_users:
+    user = unconfirm_users.pop()
+    print(f"valid user:{user}")
+    confirm_users.append(user)
+
+# while结合列表，移除列表的特定元素
+animals = ["cat", "dog", "cat", "fish", "cat", "rabbit"]
+while "cat" in animals:
+    animals.remove("cat")
+print(animals)
