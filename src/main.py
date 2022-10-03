@@ -331,3 +331,26 @@ if open_test_input:
 
 # 求模运算
 print(22 % 5)  # output: 2
+
+# while 示例
+cur_num = 0
+while cur_num <= 5:
+    print(cur_num)
+    cur_num = cur_num + 1
+
+# break 示例
+cur_num = 0
+while True:
+    print(cur_num)
+    cur_num = cur_num + 1
+    if cur_num > 5:
+        break
+
+# continue 示例
+cur_num = 0
+while cur_num <= 10:
+    old_num = cur_num
+    cur_num = cur_num + 1
+    if old_num % 2 != 0:
+        continue
+    print(old_num)
