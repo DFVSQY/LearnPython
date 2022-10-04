@@ -368,3 +368,47 @@ animals = ["cat", "dog", "cat", "fish", "cat", "rabbit"]
 while "cat" in animals:
     animals.remove("cat")
 print(animals)
+
+# 后面的所有缩进行构成了函数体
+
+
+def hello_world():
+    """
+    此处的文本是称为文档字符串 （docstring）的注释，描述了函数是做什么的。
+    文档字符串用三引号括起，Python使用它们来生成有关程序中函数的文档。
+
+    显示简单的问候语
+    """
+    print("hello world")
+
+
+hello_world()
+
+
+def greet_user(username):
+    print(f"Hello, {username.title()}!")
+
+
+greet_user("Bill")
+
+
+def des_pet(animal_type, animal_name):
+    print(f"I have a {animal_type}, its name is {animal_name}")
+
+
+# 调用函数时，可使用位置实参，这要求实参的顺序与形参的顺序相同
+des_pet("dog", "harry")
+
+# 调用函数时，也可使用关键字实参 ，其中每个实参都由变量名和值组成，关键字实参的顺序无关紧要
+des_pet(animal_name="harry", animal_type="dog")
+
+
+def des_editor(user_name, editor_name="vscode"):
+    """ 默认参数, 带默认值的参数需要放到最后面 """
+    print(f"{user_name} favaritor editor is: {editor_name.title()}")
+
+
+# 默认参数的使用
+des_editor("Bill")
+des_editor("Jobs", "sublime text")
+des_editor(editor_name="notepad", user_name="Jim")
