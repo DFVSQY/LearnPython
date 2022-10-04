@@ -194,6 +194,24 @@ print(only_one_str)  # OnlyOne
 fix_titles = ("File", "Edit", "Selection")
 print(fix_titles)  # ('File', 'Edit', 'Selection')
 
+"""
+if 语句文档的补充：https://docs.python.org/3/library/stdtypes.html#truth-value-testing
+
+Truth Value Testing:
+
+Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below.
+
+By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. 1 Here are most of the built-in objects considered false:
+
+constants defined to be false: None and False.
+
+zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)
+
+empty sequences and collections: '', (), [], {}, set(), range(0)
+
+Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.)
+"""
+
 cars = ["audi", "bmw", "subaru", "toyota"]
 for car in cars:
     if car == "bmw":
@@ -412,3 +430,30 @@ def des_editor(user_name, editor_name="vscode"):
 des_editor("Bill")
 des_editor("Jobs", "sublime text")
 des_editor(editor_name="notepad", user_name="Jim")
+
+
+def format_name(first_name, last_name, middle_name=""):
+    if not middle_name:  # Empty or Null
+        full_name = f"{first_name.title()} {last_name.title()}"
+    else:
+        full_name = f"{first_name.title()} {middle_name.title()} {last_name.title()}"
+    return full_name
+
+
+# 带返回值函数
+print(format_name("bill", "gates"))
+print(format_name("steve", "jobs", "jim"))
+
+
+def build_person(first_name, last_name, age=None):
+    person = {"first_name": first_name.title(), "last_name": last_name.title()}
+    if age:  # not (None or 0)
+        person["age"] = age
+    return person
+
+
+#output: {'first_name': 'Steven', 'last_name': 'Jobs', 'age': 20}
+print(build_person("steven", "jobs", 20))
+
+#output: {'first_name': 'Bill', 'last_name': 'Gates'}
+print(build_person("bill", "gates", 0))
