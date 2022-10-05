@@ -457,3 +457,20 @@ print(build_person("steven", "jobs", 20))
 
 #output: {'first_name': 'Bill', 'last_name': 'Gates'}
 print(build_person("bill", "gates", 0))
+
+
+def title_modify(titles):
+    """ 修改列表 """
+    if not titles:
+        return
+    num = len(titles)
+    for i in range(num):
+        titles[i] = titles[i].title()
+
+
+menus = ["file", "edit", "selection", "view", "go", "run", "terminal", "help"]
+title_modify(menus[:])  # 传递是menus副本，不会修改menus本身
+print(menus)
+
+title_modify(menus)  # 会修改menus本身
+print(menus)
