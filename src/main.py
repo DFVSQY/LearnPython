@@ -492,3 +492,19 @@ def build_profile(first_name, last_name, **user_info):
 user_profile = build_profile(
     "Bill", "Gates", location="China", age=18, sex="Man")
 print(user_profile)
+
+
+def make_pizza(*mats):
+    """
+    传递任意数量的实参
+
+    形参名*toppings 中的星号让Python创建一个名为toppings 的空元组，
+    并将收到的所有值都封装到这个元组中
+    """
+    print("--- begin make pizza:", mats)
+    for mat in mats:
+        print(f" - {mat}")
+    print("--- end make pizza")
+
+
+make_pizza("water", "egg", "milk", "apple")
