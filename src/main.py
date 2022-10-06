@@ -474,3 +474,21 @@ print(menus)
 
 title_modify(menus)  # 会修改menus本身
 print(menus)
+
+
+def build_profile(first_name, last_name, **user_info):
+    """
+    使用任意数量的关键字实参
+
+    形参**user_info 中的两个星号让
+    Python创建一个名为user_info 的空字典，并将收到的所有名称值
+    对都放到这个字典中
+    """
+    user_info['first_name'] = first_name
+    user_info['last name'] = last_name
+    return user_info
+
+
+user_profile = build_profile(
+    "Bill", "Gates", location="China", age=18, sex="Man")
+print(user_profile)
